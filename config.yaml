@@ -1,0 +1,34 @@
+device:
+  id: null  # null = auto-select first available device
+
+bot:
+  debug_mode: true
+  save_images: true
+  show_preview: true
+  interval: 10           # seconds between detection cycles
+  output_dir: "game_bot_output"
+  swipe_duration: 200    # swipe gesture duration in milliseconds
+
+detection:
+  x_range: [0, 1600]     # horizontal pixel range to search for circles
+  min_radius: 40
+  max_radius: 60
+  distance_threshold: 120   # max pixel distance to consider two balls connectable
+  color_threshold: 30       # max color distance to consider two balls the same color
+  lock_detect_threshold: 100  # grayscale threshold to identify locked balls
+  lock_sample_ratio: 0.15   # fraction of ball radius used to sample lock icon
+  sample_radius_ratio: 0.3  # fraction of ball radius used to sample ball color
+  min_path_length: 4        # minimum number of balls in a valid path
+  hough:
+    dp: 1
+    min_dist: 50
+    param1: 50
+    param2: 30
+
+gui:
+  title: "ikonijoy tools"
+  geometry: "900x700"
+  preview_max_width: 850
+  preview_max_height: 450
+  interval_min: 5
+  interval_max: 60

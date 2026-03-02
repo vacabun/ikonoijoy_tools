@@ -1,0 +1,4 @@
+.venv
+game_bot_output
+*.DS_Store
+*__pycache__

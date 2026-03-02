@@ -1,0 +1,4 @@
+numpy>=2.0
+opencv-python>=4.0
+Pillow>=10.0
+PyYAML>=6.0
